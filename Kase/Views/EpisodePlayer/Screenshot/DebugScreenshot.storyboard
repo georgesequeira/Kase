@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NYy-xX-8xc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Debug Screenshot View Controller-->
+        <scene sceneID="7s8-7k-AEE">
+            <objects>
+                <viewController storyboardIdentifier="debugScreenshotSb" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="NYy-xX-8xc" customClass="DebugScreenshotViewController" customModule="Kase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVz-va-KNY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOJ-4L-iWm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bB-LR-R48">
+                                        <rect key="frame" x="20" y="20" width="374" height="778"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="NYy-xX-8xc" eventType="touchUpInside" id="ak2-IT-g2y"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KzT-vo-UGC">
+                                        <rect key="frame" x="47" y="159" width="320" height="500"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="500" id="Bwe-Vh-riF"/>
+                                            <constraint firstAttribute="width" constant="320" id="pqv-f5-CKE"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="KzT-vo-UGC" firstAttribute="centerY" secondItem="xOJ-4L-iWm" secondAttribute="centerY" id="JyN-So-1Wj"/>
+                                    <constraint firstAttribute="trailing" secondItem="4bB-LR-R48" secondAttribute="trailing" constant="20" symbolic="YES" id="QI3-sM-Hed"/>
+                                    <constraint firstAttribute="bottom" secondItem="4bB-LR-R48" secondAttribute="bottom" constant="20" symbolic="YES" id="R8D-e6-hZP"/>
+                                    <constraint firstItem="KzT-vo-UGC" firstAttribute="centerX" secondItem="xOJ-4L-iWm" secondAttribute="centerX" id="Sfg-4F-Vg8"/>
+                                    <constraint firstItem="4bB-LR-R48" firstAttribute="top" secondItem="xOJ-4L-iWm" secondAttribute="top" constant="20" symbolic="YES" id="eAj-1T-PaC"/>
+                                    <constraint firstItem="4bB-LR-R48" firstAttribute="leading" secondItem="xOJ-4L-iWm" secondAttribute="leading" constant="20" symbolic="YES" id="fJ1-uW-oWp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4337007705479452" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xOJ-4L-iWm" firstAttribute="top" secondItem="RtK-K3-kTg" secondAttribute="top" id="2lt-yJ-a18"/>
+                            <constraint firstItem="RtK-K3-kTg" firstAttribute="bottom" secondItem="xOJ-4L-iWm" secondAttribute="bottom" id="2zK-73-JFK"/>
+                            <constraint firstItem="xOJ-4L-iWm" firstAttribute="leading" secondItem="RtK-K3-kTg" secondAttribute="leading" id="NEi-N6-Xzx"/>
+                            <constraint firstItem="RtK-K3-kTg" firstAttribute="trailing" secondItem="xOJ-4L-iWm" secondAttribute="trailing" id="kLd-uy-7bf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RtK-K3-kTg"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="KzT-vo-UGC" id="RI1-8x-Zw0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vWI-L3-GsE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="-149"/>
+        </scene>
+    </scenes>
+</document>

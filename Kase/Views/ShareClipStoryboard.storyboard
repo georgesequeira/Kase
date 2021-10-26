@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Share Clip View Controller-->
+        <scene sceneID="frK-em-7DD">
+            <objects>
+                <viewController storyboardIdentifier="shareclipSb" id="7S3-NS-4et" customClass="ShareClipViewController" customModule="Kase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YX1-V5-fwO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vxf-wH-eOv">
+                                <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-hN-Po2">
+                                        <rect key="frame" x="315" y="373" width="59" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AY-wi-BOK">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="q0C-2I-kzf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.83921568629999999" green="0.18823529410000001" blue="0.19215686269999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelTapped:" destination="7S3-NS-4et" eventType="touchUpInside" id="Rnk-Ge-6Za"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="3AY-wi-BOK" secondAttribute="trailing" constant="40" id="guQ-Ze-x5n"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RjE-1q-W7w">
+                                        <rect key="frame" x="98" y="2" width="218.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creating clip around:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysA-it-KK4">
+                                                <rect key="frame" x="0.0" y="0.0" width="159" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;time&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAB-1B-EUi">
+                                                <rect key="frame" x="159" y="0.0" width="59.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqu-2h-hBa" userLabel="currPlaying" customClass="MultiSlider" customModule="MultiSlider">
+                                        <rect key="frame" x="5" y="36.5" width="404" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="guH-xP-OlG"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="snapStepSize">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isValueLabelRelative" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showsThumbImageShadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="thumbCount">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRoundTrackEnds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="outerTrackColor">
+                                                <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHapticSnap" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keepsDistanceBetweenThumbs" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="thumbImage" value="circle.fill" catalog="system"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aD6-HR-otw" customClass="MultiSlider" customModule="MultiSlider">
+                                        <rect key="frame" x="5" y="36.5" width="404" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="Akw-IA-f50"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="snapStepSize">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isVertical" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isValueLabelRelative" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showsThumbImageShadow" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="trackWidth">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="thumbCount">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="hasRoundTrackEnds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="outerTrackColor">
+                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHapticSnap" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keepsDistanceBetweenThumbs" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko0-mc-hlH">
+                                        <rect key="frame" x="165" y="170.5" width="84" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="A9z-BW-dff"/>
+                                        </constraints>
+                                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Preview" image="play.circle" catalog="system">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="previewTapped:" destination="7S3-NS-4et" eventType="touchUpInside" id="NlO-hL-fPr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdI-lt-sC7">
+                                        <rect key="frame" x="147" y="212.5" width="120" height="34"/>
+                                        <state key="normal" title="Send Message">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendTweet:" destination="7S3-NS-4et" eventType="touchUpInside" id="OOf-NI-xPc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="RjE-1q-W7w" firstAttribute="top" secondItem="Vxf-wH-eOv" secondAttribute="top" constant="2" id="5AQ-bs-l7J"/>
+                                    <constraint firstItem="RdI-lt-sC7" firstAttribute="centerX" secondItem="Vxf-wH-eOv" secondAttribute="centerX" id="8XN-IY-TUh"/>
+                                    <constraint firstAttribute="trailing" secondItem="aD6-HR-otw" secondAttribute="trailing" constant="5" id="Eki-qi-awu"/>
+                                    <constraint firstAttribute="bottom" secondItem="cQP-hN-Po2" secondAttribute="bottom" constant="40" id="GyK-mU-iSN"/>
+                                    <constraint firstItem="RjE-1q-W7w" firstAttribute="centerX" secondItem="Vxf-wH-eOv" secondAttribute="centerX" id="Ijr-BU-a56"/>
+                                    <constraint firstItem="Ko0-mc-hlH" firstAttribute="centerX" secondItem="Vxf-wH-eOv" secondAttribute="centerX" id="KQb-4T-h5p"/>
+                                    <constraint firstAttribute="trailing" secondItem="cQP-hN-Po2" secondAttribute="trailing" constant="40" id="PIW-gF-Jg9"/>
+                                    <constraint firstItem="zqu-2h-hBa" firstAttribute="bottom" secondItem="aD6-HR-otw" secondAttribute="bottom" id="UN7-Xk-n4d"/>
+                                    <constraint firstItem="zqu-2h-hBa" firstAttribute="trailing" secondItem="aD6-HR-otw" secondAttribute="trailing" id="VLv-cD-FEz"/>
+                                    <constraint firstItem="aD6-HR-otw" firstAttribute="leading" secondItem="Vxf-wH-eOv" secondAttribute="leading" constant="5" id="aJN-fm-fa8"/>
+                                    <constraint firstItem="zqu-2h-hBa" firstAttribute="top" secondItem="aD6-HR-otw" secondAttribute="top" id="eTG-Cr-jpA"/>
+                                    <constraint firstItem="zqu-2h-hBa" firstAttribute="leading" secondItem="aD6-HR-otw" secondAttribute="leading" id="joi-x0-i0S"/>
+                                    <constraint firstItem="aD6-HR-otw" firstAttribute="top" secondItem="RjE-1q-W7w" secondAttribute="bottom" constant="14" id="mzG-9P-iD7"/>
+                                    <constraint firstItem="RdI-lt-sC7" firstAttribute="top" secondItem="Ko0-mc-hlH" secondAttribute="bottom" constant="20" id="oKz-Hy-P9E"/>
+                                    <constraint firstItem="Ko0-mc-hlH" firstAttribute="top" secondItem="zqu-2h-hBa" secondAttribute="bottom" constant="14" id="pCy-Pb-bx2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vxf-wH-eOv" firstAttribute="height" secondItem="YX1-V5-fwO" secondAttribute="height" multiplier="0.5" id="0kN-nF-w41"/>
+                            <constraint firstItem="Vxf-wH-eOv" firstAttribute="leading" secondItem="dES-ah-gkH" secondAttribute="leading" id="1sl-79-oKN"/>
+                            <constraint firstItem="Vxf-wH-eOv" firstAttribute="centerY" secondItem="YX1-V5-fwO" secondAttribute="centerY" multiplier="1.5" id="eJu-1l-nZq"/>
+                            <constraint firstItem="dES-ah-gkH" firstAttribute="trailing" secondItem="Vxf-wH-eOv" secondAttribute="trailing" id="g51-nS-SZb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dES-ah-gkH"/>
+                    </view>
+                    <connections>
+                        <outlet property="currPlayingmultiSlider" destination="zqu-2h-hBa" id="gtZ-Bl-zAO"/>
+                        <outlet property="multiSlider" destination="aD6-HR-otw" id="nfg-c4-QYU"/>
+                        <outlet property="referenceTime" destination="dAB-1B-EUi" id="HZY-yF-cWe"/>
+                        <outlet property="sendMessageButton" destination="RdI-lt-sC7" id="g75-Ul-o3D"/>
+                        <outlet property="slideView" destination="Vxf-wH-eOv" id="yBm-vd-3Lv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1J-ab-BHC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="97"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="circle.fill" catalog="system" width="128" height="121"/>
+        <image name="play.circle" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

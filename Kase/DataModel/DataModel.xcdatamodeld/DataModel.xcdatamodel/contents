@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Episode" representedClassName="Episode" syncable="YES" codeGenerationType="class">
+        <attribute name="albumImageUrl" optional="YES" attributeType="String"/>
+        <attribute name="episodeName" optional="YES" attributeType="String"/>
+        <attribute name="episodeUrl" optional="YES" attributeType="String"/>
+        <attribute name="error" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="loaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="podcastName" optional="YES" attributeType="String"/>
+        <attribute name="rawEpisodeName" attributeType="String"/>
+        <attribute name="rawPodcastName" attributeType="String"/>
+        <attribute name="spotifyUrl" optional="YES" attributeType="String"/>
+        <relationship name="marks" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Mark" inverseName="episode" inverseEntity="Mark"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="podcastName"/>
+                <constraint value="episodeName"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="Mark" representedClassName="Mark" syncable="YES" codeGenerationType="class">
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="errorMsg" optional="YES" attributeType="String"/>
+        <attribute name="hadError" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="notes" attributeType="String"/>
+        <attribute name="screenshotId" optional="YES" attributeType="String"/>
+        <attribute name="seconds" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="source" optional="YES" attributeType="String"/>
+        <relationship name="episode" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Episode" inverseName="marks" inverseEntity="Episode"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="seconds"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="Episode" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="Mark" positionX="-54" positionY="18" width="128" height="163"/>
+    </elements>
+</model>

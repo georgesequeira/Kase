@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>44733505451-l92vjqp7jku8f6kbbc2o2716ae9jgr50.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.44733505451-l92vjqp7jku8f6kbbc2o2716ae9jgr50</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBmNpOpbOVsxu4bf2EW33JJWsBwNKSleio</string>
+	<key>GCM_SENDER_ID</key>
+	<string>44733505451</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.razeware.Extractor</string>
+	<key>PROJECT_ID</key>
+	<string>kinlet-1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kinlet-1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:44733505451:ios:d55a5c3ee9ce3de1843cee</string>
+	<key>DATABASE_URL</key>
+	<string>https://kinlet-1.firebaseio.com</string>
+</dict>
+</plist>
